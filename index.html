@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recursos/css manual/style.css" />
+    <link rel="stylesheet" href="recursos/css/bootstrap.min.css" />
     <title>Conversor de moneda</title>
   </head>
   <body>
     <header>
-
+        <h1>Conversor de moneda</h1>
     </header>
-    <main>
-
+    <main class="section_main">
+        <form id="form-converter">
+            <div class="form-group">
+                <label for="input-moneda-origen">Moneda de origen:</label>
+                <select id="input-moneda-origen" class="form-control">
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
+                    <option value="JPY">Yen (JPY)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input-moneda-destino">Moneda de destino:</label>
+                <select id="input-moneda-destino" class="form-control">
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <
     </main>
-    <footer>
-
+    <footer class="section_footer">
+        <p>Desarrollado por <strong>Nombre Apellido</strong> &copy; 2021</p>
     </footer>
-    <script src="recursos/javascript/script.js">
-    </script>
+    <script src="recursos/javascript/script.js"></script>
   </body>
 </html>
