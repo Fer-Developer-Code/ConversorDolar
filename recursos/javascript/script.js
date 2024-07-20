@@ -48,7 +48,7 @@ document.getElementById("form-converter").addEventListener("submit", async funct
     }
 
     const valorConvertido = convertirMoneda(valor, tasaOrigen, tasaDestino);
-    document.getElementById("output-valor").value = valorConvertido.toFixed(2);
+    document.getElementById("output-valor").value = `${valorConvertido.toFixed(2)} ${monedaDestino} (${tipoCambio})`;
 });
 
 function convertirMoneda(valor, tasaOrigen, tasaDestino) {
