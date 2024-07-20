@@ -87,9 +87,12 @@ document
     // Llama a la función para convertir el valor
     const valorConvertido = convertirMoneda(valor, tasaOrigen, tasaDestino);
     // Muestra el resultado formateado en el campo de salida
-    document.getElementById("output-valor").value = `${valorConvertido.toFixed(
-      2
-    )} ${monedaDestino} (${tipoCambio})`;
+    document.getElementById(
+      "output-valor"
+    ).value = `${valorConvertido.toLocaleString("es-ES", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })} ${monedaDestino} (${tipoCambio})`;
   });
 
 // Función para convertir el valor según las tasas de cambio
