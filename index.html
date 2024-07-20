@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="recursos/css manual/style.css" />
+    <link rel="stylesheet" href="recursos/css/manual/style.css" />
     <link rel="stylesheet" href="recursos/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Conversor de moneda</title>
   </head>
   <body>
     <header class="container mt-5">
-      <h1 class="text-center text-primary">Conversor de moneda</h1>
+      <h1 class="text-center text-primary"><i class="fas fa-exchange-alt"></i> Conversor de moneda</h1>
     </header>
     <main class="section_main container">
       <section class="row justify-content-center">
         <div class="col-md-6">
           <form id="form-converter">
             <fieldset class="form-group">
-              <label for="input-moneda-origen">Moneda de origen:</label>
+              <label for="input-moneda-origen"><i class="fas fa-coins"></i> Moneda de origen:</label>
               <select id="input-moneda-origen" class="form-control">
                 <option value="ARS" selected>Pesos argentinos (ARS)</option>
                 <option value="USD">Dólar Blue (USD)</option>
@@ -26,7 +27,7 @@
               </select>
             </fieldset>
             <fieldset class="form-group">
-              <label for="input-moneda-destino">Moneda de destino:</label>
+              <label for="input-moneda-destino"><i class="fas fa-money-bill-wave"></i> Moneda de destino:</label>
               <select id="input-moneda-destino" class="form-control">
                 <option value="ARS">Pesos argentinos (ARS)</option>
                 <option value="USD">Dólar Blue (USD)</option>
@@ -36,7 +37,7 @@
               </select>
             </fieldset>
             <fieldset class="form-group">
-              <label for="input-valor">Valor:</label>
+              <label for="input-valor"><i class="fas fa-calculator"></i> Valor:</label>
               <input
                 type="number"
                 id="input-valor"
@@ -47,14 +48,14 @@
               />
             </fieldset>
             <fieldset class="form-group">
-              <label for="select-tipo-cambio">Tipo de cambio:</label>
+              <label for="select-tipo-cambio"><i class="fas fa-chart-line"></i> Tipo de cambio:</label>
               <select id="select-tipo-cambio" class="form-control">
                 <option value="oficial">Oficial</option>
                 <option value="blue" selected>Blue</option>
               </select>
             </fieldset>
             <fieldset class="form-group">
-              <label for="output-valor">Valor convertido:</label>
+              <label for="output-valor"><i class="fas fa-exchange-alt"></i> Valor convertido:</label>
               <input
                 type="number"
                 id="output-valor"
@@ -69,7 +70,7 @@
         </div>
       </section>
     </main>
-    <footer class="section_footer">
+    <footer class="section_footer text-center">
       <p>Desarrollado por <strong>Nombre Apellido</strong> &copy; 2021</p>
     </footer>
     <script src="recursos/javascript/script.js"></script>
