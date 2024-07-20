@@ -40,20 +40,31 @@ async function procesarValoresCambio(event) {
 
     let tasaOrigen = 1, tasaDestino = 1;
 
-    if (monedaOrigen === 'USD' && tipoCambio === 'oficial') {
-        tasaOrigen = valorUSDOficial;
-    } else if (monedaOrigen === 'USD' && tipoCambio === 'blue') {
-        tasaOrigen = valorUSDBlue;
-    } else if (monedaOrigen === 'ARS') {
-        tasaOrigen = 1; // ARS a ARS no necesita conversión
-    }
-
-    if (monedaDestino === 'USD' && tipoCambio === 'oficial') {
-        tasaDestino = valorUSDOficial;
-    } else if (monedaDestino === 'USD' && tipoCambio === 'blue') {
-        tasaDestino = valorUSDBlue;
+    if (monedaOrigen === 'ARS') {
+        tasaOrigen = 1;
+        if (monedaDestino === 'USD' && tipoCambio === 'blue') {
+            tasaDestino = valorUSDBlue;
+        } else if (monedaDestino === 'USD_OF' && tipoCambio === 'oficial') {
+            tasaDestino = valorUSDOficial;
+        } else if (monedaDestino === 'EUR' && tipoCambio === 'blue') {
+            tasaDestino = valorEUROBlue;
+        } else if (monedaDestino === 'EUR_OF' && tipoCambio === 'oficial') {
+            tasaDestino = valorEUROOficial;
+        }
     } else if (monedaDestino === 'ARS') {
-        tasaDestino = 1; // ARS a ARS no necesita conversión
+        tasaDestino = 1;
+        if (monedaOrigen === 'USD' && tipoCambio === 'blue') {
+            tasaOrigen = valorUSDBlue;
+        } else if (monedaOrigen === 'USD_OF' && tipoCambio === 'oficial') {
+            tasaOrigen = valorUSDOficial;
+        } else if (monedaOrigen === 'EUR' && tipoCambio === 'blue') {
+            tasaOrigen = valorEUROBlue;
+        } else if (monedaOrigen === 'EUR_OF' && tipoCambio === 'oficial') {
+            tasaOrigen = valorEUROOficial;
+        }
+    } else {
+        alert("Conversión no soportada");
+        return;
     }
 
     const valorConvertido = convertirMoneda(valor, tasaOrigen, tasaDestino);
