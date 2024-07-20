@@ -49,3 +49,7 @@ fieldset label {
     background-color: #e9ecef;
     font-weight: bold;
 }
+#input-valor {
+    font-size: 1.25rem;
+    text-align: right;
+  }  

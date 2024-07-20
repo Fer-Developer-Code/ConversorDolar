@@ -73,3 +73,19 @@ async function fetchData() {
     return null;
   }
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const inputValor = document.getElementById("input-valor");
+
+  function formatNumber(value) {
+    // Elimina caracteres no numéricos
+    const cleanedValue = value.replace(/\D/g, "");
+    
+    // Agrega separadores de miles
+    return cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
+  inputValor.addEventListener("input", function() {
+    const formattedValue = formatNumber(inputValor.value);
+    inputValor.value = formattedValue;
+  });
+});
