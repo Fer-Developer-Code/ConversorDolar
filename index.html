@@ -8,28 +8,63 @@
     <title>Conversor de moneda</title>
   </head>
   <body>
-    <header>
-        <h1>Conversor de moneda</h1>
+    <header class="container mt-5">
+      <h1 class="text-center text-primary">Conversor de moneda</h1>
     </header>
-    <main class="section_main">
-        <form id="form-converter">
-            <div class="form-group">
-                <label for="input-moneda-origen">Moneda de origen:</label>
-                <select id="input-moneda-origen" class="form-control">
-                    <option value="USD">Dólar Americano (USD)</option>
-                    <option value="EUR">Euro (EUR)</option>
-                    <option value="GBP">Libra Esterlina (GBP)</option>
-                    <option value="JPY">Yen (JPY)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="input-moneda-destino">Moneda de destino:</label>
-                <select id="input-moneda-destino" class="form-control">
-                    <option value="USD">Dólar Americano (USD)</option>
-                    <
+    <main class="section_main container">
+      <section class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="form-converter">
+            <fieldset class="form-group">
+              <label for="input-moneda-origen">Moneda de origen:</label>
+              <select id="input-moneda-origen" class="form-control">
+                <option value="USD">Dólar Blue (USD)</option>
+                <option value="ARS" selected>Pesos argentinos (ARS)</option>
+              </select>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="input-moneda-destino">Moneda de destino:</label>
+              <select id="input-moneda-destino" class="form-control">
+                <option value="USD" selected>Dólar Americano Blue (USD)</option>
+                <option value="ARS">Pesos argentinos (ARS)</option>
+              </select>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="input-valor">Valor:</label>
+              <input
+                type="number"
+                id="input-valor"
+                class="form-control"
+                min="0"
+                step="any"
+                required
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="select-tipo-cambio">Tipo de cambio:</label>
+              <select id="select-tipo-cambio" class="form-control">
+                <option value="oficial">Oficial</option>
+                <option value="blue" selected>Blue</option>
+              </select>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="output-valor">Valor convertido:</label>
+              <input
+                type="number"
+                id="output-valor"
+                class="form-control"
+                disabled
+              />
+            </fieldset>
+            <button type="submit" class="btn btn-primary btn-block">
+              Convertir
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="section_footer">
-        <p>Desarrollado por <strong>Nombre Apellido</strong> &copy; 2021</p>
+      <p>Desarrollado por <strong>Nombre Apellido</strong> &copy; 2021</p>
     </footer>
     <script src="recursos/javascript/script.js"></script>
   </body>
